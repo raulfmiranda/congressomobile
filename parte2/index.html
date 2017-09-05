@@ -2,16 +2,30 @@
 <html>
 	
 	<head>
-		<title>Desafio Mini-Teste Congresso de Mobile</title>
+		<title>Parte2 - Desafio Mini-Teste Congresso de Mobile</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href='css/main.css' rel='stylesheet'>
 		<link href='css/bootstrap.min.css' rel='stylesheet'>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 	<body>
-		<div class='container' style="border:1px solid #cecece">
+	
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+			<div class='container'>
+				<h1 class="navbar-brand"><i class="material-icons">account_balance</i></h1>
+				<div class="container-fluid" style="border:1px solid #cecece">
+					<a href="#" id="inicio-button" class="btn btn-link">Início</a>
+					<a href="#" id="conteudo-button" class="btn btn-link">Conteúdo</a>
+					<a href="#" id="palestrante-button" class="btn btn-link">Palestrante</a>
+					<a href="#" id="contato-button" class="btn btn-link">Contato</a>			
+				</div>
+			</div>			
+		</nav>
+	
+	
+		<div class='container' style="border:1px solid #cecece; margin-top:55px">
 			</br>
-			<div class="bg-primary text-white" style="border:1px solid #cecece; margin:-25px -15px 0px -15px">
+			<div id='inicio' class="bg-primary text-white" style="border:1px solid #cecece; margin:-25px -15px 0px -15px">
 				<div class='row'>
 					<div class='col-md-12 text-center'>
 					<h1 style="margin-top:20px">Chamada Para Ação</h1>
@@ -28,7 +42,7 @@
 			
 			</br>
 			
-			<div class="row">
+			<div id='conteudo' class="row">
 				<div class='col-md-4 offset-md-2'>
 					<div class='card'>
 						<div class='card-block'>
@@ -67,9 +81,9 @@
 			</div>
 			</br></br>
 			
-			<div class='row align-items-center'>
+			<div id='palestrante' class='row align-items-center'>
 				<div class='col-md-2 offset-md-2'>
-					<img class="rounded-circle" src='Fulano-de-Tal-75x75.png'/>
+					<img class="rounded-circle img-thumbnail" src='Fulano-de-Tal-75x75-fundo-transparente.png'/>
 				</div>
 				<div class='col-md-8'>
 					<h2>Fulano de Tal</h2>
@@ -83,19 +97,20 @@
 			</div>
 			</br></br>
 			
-			<div class='offset-md-2'>
+			<div id='contato' class='offset-md-2'>
 				<div class='card w-75'>
 					<h4 class='card-header text-center'>Contato</h4>
 					<div class='card-block'>						
 						<p class='card-text'>
-							<form>
+							<form action="index.html" method="post">
 							  <fieldset>
 								<div class="form-group">
-								  <input type="text" id="inputNome" style="margin-bottom: 10px" class="form-control" placeholder="Nome">
-								  <input type="text" id="inputEmail" style="margin-bottom: 10px" class="form-control" placeholder="Email">
-								  <input type="text" id="inputWhatsapp" style="margin-bottom: 10px" class="form-control" placeholder="Whatsapp">
+									<p id="formMsg" class='d-none'>Mensagem de Informação</p>
+									<input type="text" id="inputNome" style="margin-bottom: 10px" class="form-control" placeholder="Nome">
+									<input type="text" id="inputEmail" style="margin-bottom: 10px" class="form-control" placeholder="Email">
+									<input type="text" id="inputWhatsapp" style="margin-bottom: 10px" class="form-control" placeholder="Whatsapp">
 								</div>
-								<button type="submit" class="btn btn-primary btn-block">Enviar</button>
+								<button type="submit" onclick="camposValidos()" class="btn btn-primary btn-block">Enviar</button>
 							  </fieldset>
 							</form>
 						</p>
@@ -109,5 +124,6 @@
 
 		<script src='http:///ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 		<script src='js/bootstrap.min.js'></script>
+		<script src='js/jsparte2.js'></script>
 	</body>
 </html>
