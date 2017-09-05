@@ -102,15 +102,15 @@
 					<h4 class='card-header text-center'>Contato</h4>
 					<div class='card-block'>						
 						<p class='card-text'>
-							<form action="index.html" method="post">
+							<form action="" method="get">
 							  <fieldset>
 								<div class="form-group">
-									<p id="formMsg" class='d-none'>Mensagem de Informação</p>
+									<p id="formMsg" style='display:none;' class='text-center'>Preencha os campos a seguir.</p>
 									<input type="text" id="inputNome" style="margin-bottom: 10px" class="form-control" placeholder="Nome">
 									<input type="text" id="inputEmail" style="margin-bottom: 10px" class="form-control" placeholder="Email">
-									<input type="text" id="inputWhatsapp" style="margin-bottom: 10px" class="form-control" placeholder="Whatsapp">
+									<input type="text" id="inputWhatsapp" style="margin-bottom: 10px" class="form-control" placeholder="Whatsapp" name="inputWhatsapp" maxlength="15">
 								</div>
-								<button type="submit" onclick="camposValidos()" class="btn btn-primary btn-block">Enviar</button>
+								<button id='btEnviar' type="button" class="btn btn-primary btn-block">Enviar</button>
 							  </fieldset>
 							</form>
 						</p>

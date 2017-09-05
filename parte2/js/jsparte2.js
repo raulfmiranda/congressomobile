@@ -24,22 +24,24 @@ $(document).ready(function() {
 		}, 500);
 	});
 	
+	$("#btEnviar").on('click', function(){
+		camposValidos();
+    });
+	
 	function isEmail(email){
-		var exclude=/[^@-.w]|^[_@.-]|[._-]{2}|[@.]{2}|(@)[^@]*1/;
-		var check=/@[w-]+./;
-		var checkend=/.[a-zA-Z]{2,3}$/;
-		if(((email.search(exclude) != -1)||(email.search(check)) == -1)||(email.search(checkend) == -1)){return false;}
-		else {return true;}
+		var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+		if(filtro.test(email)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	function camposValidos() {
-		var inputEmail = document.getElementById('inputEmail');
-		if(isEmail(inputEmail.value)) {
-			$('#formMsg').attr('d-none', '').text('E-mail válido');
-			return true;
-		} else {
-			$('#formMsg').attr('d-none', '').text('E-mail inválido');
-			return false;
+		var inputEmailVal = $('#inputEmail').val();
+		//alert('passou da declaração '+ isEmail(inputEmailVal));
+		if(!isEmail(inputEmailVal)) {
+			$('#formMsg').text('E-mail inválido.').css('color', 'red').show( "slow" );
 		}
 	}
 });
