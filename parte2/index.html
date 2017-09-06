@@ -7,10 +7,66 @@
 		<link href='css/main.css' rel='stylesheet'>
 		<link href='css/bootstrap.min.css' rel='stylesheet'>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	</head>
 	<body>
 	
-		<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+	<!--
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Navbar</a>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+	-->
+	
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top navbar-expand-md bg-inverse">
+			<button class="navbar-toggler navbar-toggler-right bg-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class='container'>
+				<h1 class="navbar-brand">
+					<img src="bootstrap-solid.svg" width="25" height="25" alt="">
+					<!-- <i class="material-icons">account_balance</i> -->
+				</h1>
+				
+				<div class="container-fluid collapse navbar-collapse bg-primary" id="navbarSupportedContent" style="border:1px solid #cecece; margin-left:40%; margin-right:30%;">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="btn btn-primary" id="inicio-button" href="#">Início<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item active">
+							<a class="btn btn-primary" id="conteudo-button" href="#">Conteúdo<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item active">
+							<a class="btn btn-primary" id="palestrante-button" href="#">Palestrante<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item active">
+							<a class="btn btn-primary" id="contato-button" href="#">Contato<span class="sr-only">(current)</span></a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>			
+		</nav>
+	
+	
+	<!--
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top navbar-expand-md">
 			<div class='container'>
 				<h1 class="navbar-brand"><i class="material-icons">account_balance</i></h1>
 				<div class="container-fluid" style="border:1px solid #cecece; margin-right:120px;">
@@ -21,11 +77,11 @@
 				</div>
 			</div>			
 		</nav>
-	
+	-->
 	
 		<div class='container' style="border:1px solid #cecece; margin-top:55px">
 			</br>
-			<div id='inicio' class="bg-primary text-white" style="border:1px solid #cecece; margin:-25px -15px 0px -15px">
+			<div id='inicio' class="bg-primary text-white" style="border-bottom:20px solid #cecece; margin:-25px -15px 0px -15px">
 				<div class='row'>
 					<div class='col-md-12 text-center'>
 					<h1 style="margin-top:20px">Chamada Para Ação</h1>
@@ -34,7 +90,7 @@
 				</br>
 				<div class='row'>
 					<div class='col-md-12 text-center'>
-					<button type='button' class="btn btn-secondary">Entre em contato agora!</button>
+					<button type='button' class="btn btn-success">Entre em contato agora!</button>
 					</div>
 				</div>
 				</br>
@@ -60,7 +116,7 @@
 					</div>
 				</div>
 			</div>
-			</br>
+			<!-- </br> -->
 			<div class="row">
 				<div class='col-md-4 offset-md-2'>
 					<div class='card'>
@@ -82,7 +138,7 @@
 			</br></br>
 			
 			<div id='palestrante' class='row align-items-center'>
-				<div class='col-md-2 offset-md-2'>
+				<div class='col-md-2 offset-md-2 text-center'>
 					<img class="rounded-circle img-thumbnail" src='Fulano-de-Tal-75x75-fundo-transparente.png'/>
 				</div>
 				<div class='col-md-8'>
@@ -97,8 +153,9 @@
 			</div>
 			</br></br>
 			
-			<div id='contato' class='offset-md-2'>
-				<div class='card w-75'>
+			<!-- <div id='contato' style='margin-right:18%; margin-left:18%'> -->
+			<div id='contato' class='col-md-8 offset-md-2'>
+				<div class='card'>
 					<h4 class='card-header text-center'>Contato</h4>
 					<div class='card-block'>						
 						<p class='card-text'>

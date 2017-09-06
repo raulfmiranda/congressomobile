@@ -1,3 +1,13 @@
+.card {
+	margin-bottom: 5% !important;
+}
+
 h1 {
-	text-align: center;
+	font-family: 'Permanent Marker', cursive !important;
+}
+
+@media (max-width: 768px) {
+	h2 {
+		text-align: center;
+	} 
 }
